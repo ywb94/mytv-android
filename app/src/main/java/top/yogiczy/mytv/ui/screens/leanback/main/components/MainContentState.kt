@@ -131,7 +131,8 @@ class LeanbackMainContentState(
         } else {
             (urlIdx + _currentIptv.urlList.size) % _currentIptv.urlList.size
         }
-
+        if(iptv.urlList.isEmpty())
+            return;
         val url = iptv.urlList[_currentIptvUrlIdx]
         log.d("播放${iptv.name}（${_currentIptvUrlIdx + 1}/${_currentIptv.urlList.size}）: $url")
 

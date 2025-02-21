@@ -67,12 +67,14 @@ fun LeanbackPanelIptvInfo(
                             modifier = textModifier,
                         )
                     }
+                    if(iptv.urlList.isEmpty()==false) {
+                        // ipv4、iptv6标识
+                        Text(
 
-                    // ipv4、iptv6标识
-                    Text(
-                        text = if (iptv.urlList[iptvUrlIdx].isIPv6()) "IPV6" else "IPV4",
-                        modifier = textModifier,
-                    )
+                            text = if (iptv.urlList[iptvUrlIdx].isIPv6()) "IPV6" else "IPV4",
+                            modifier = textModifier,
+                        )
+                    }
                 }
             }
         }
